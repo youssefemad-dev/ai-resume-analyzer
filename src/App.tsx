@@ -2,6 +2,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Auth from './pages/Auth'
+import Upload from './pages/Upload'
 import { usePuterStore } from '../lib/puter'
 import { useEffect } from 'react'
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Auth" element={<Auth />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/upload" element={<Upload />} />
       </Routes>
     </div>
   )

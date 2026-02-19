@@ -1,16 +1,19 @@
 
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import Analyzer from './pages/Analyzer'
-
+import Auth from './pages/Auth'
+import { usePuterStore } from '../lib/puter'
+import { useEffect } from 'react'
 function App() {
+  const {init} = usePuterStore();
+  useEffect(() => {
+    init();
+  }, [init]);
   return (
-    <div className="container mx-auto p-4">
-      <Navbar />
+    <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/analyzer" element={<Analyzer />} />
+        <Route path="/Auth" element={<Auth />} />
       </Routes>
     </div>
   )

@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { generateUUID } from "../utils/format";
 import { prepareInstructions } from "../../constants";
 export default function Upload() {
-  const { auth, fs, ai, isLoading, kv } = usePuterStore();
+  const { fs, ai, kv } = usePuterStore();
   const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusText, setStatusText] = useState("");

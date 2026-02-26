@@ -86,8 +86,7 @@ export default function Upload() {
       data.feedback = parsedFeedback; // Store as parsed object
       await kv.set(`resume:${uuid}`, JSON.stringify(data));
       setStatusText("Analysis complete!");
-      console.log(data);
-      // navigate(`/resume/${uuid}`);
+      navigate(`/resume/${uuid}`);
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : String(err);
       console.error("Analysis error:", err);
